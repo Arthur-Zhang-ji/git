@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <span class="logo">🎬</span>
+      <h1>抖音高清截帧</h1>
+    </div>
+
+    <div class="section">
+      <label class="label">粘贴抖音分享链接</label>
+      <input type="text" id="linkInput" placeholder="https://v.douyin.com/xxxxx/" autofocus />
+      <button id="openBtn" class="btn-primary">打开视频并截帧</button>
+    </div>
+
+    <div class="divider"><span>或者</span></div>
+
+    <div class="section">
+      <p class="hint">在抖音网页版浏览视频时，鼠标悬停在视频上即可看到截帧按钮。</p>
+      <button id="goBtn" class="btn-secondary">前往抖音网页版</button>
+    </div>
+
+    <div class="shortcuts">
+      <h3>快捷键</h3>
+      <div class="row"><kbd>Ctrl+S</kbd><span>保存当前帧</span></div>
+      <div class="row"><kbd>Space</kbd><span>播放 / 暂停</span></div>
+      <div class="row"><kbd>, .</kbd><span>逐帧步进</span></div>
+    </div>
+
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

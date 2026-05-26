@@ -1,0 +1,119 @@
+.dyfc-controls {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: flex;
+  gap: 5px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 22px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.dyfc-controls.dyfc-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dyfc-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  transition: background 0.15s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.dyfc-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.dyfc-btn:active {
+  transform: scale(0.92);
+}
+
+.dyfc-btn-play {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+}
+
+.dyfc-btn-capture {
+  width: auto;
+  padding: 0 14px;
+  border-radius: 16px;
+  background: #fe2c55;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 3px;
+}
+
+.dyfc-btn-capture:hover {
+  background: #e8254a;
+}
+
+.dyfc-capture-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.dyfc-capture-label {
+  white-space: nowrap;
+}
+
+.dyfc-resolution {
+  font-size: 10px;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+/* ── Toast ─────────────────────────────── */
+
+.dyfc-toast {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 8px 18px;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.28s, transform 0.28s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.dyfc-toast-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dyfc-toast-success {
+  background: rgba(20, 195, 80, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dyfc-toast-error {
+  background: rgba(255, 50, 50, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
